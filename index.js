@@ -1,4 +1,4 @@
-const attempt = {
+const currentAttempt = {
     number: 0,
     letter: 0,
 };
@@ -12,18 +12,18 @@ document.addEventListener("keyup", function(e) {
     }
 
     if (e.key === "Backspace") {
-        if (0 < attempt.letter) {
-            attempt.letter -= 1;
+        if (0 < currentAttempt.letter) {
+            currentAttempt.letter -= 1;
             renderLetter("");    
         }
     } else if (e.key === "Enter") {
-        if (attempt.letter === 5) {
+        if (currentAttempt.letter === 5) {
             renderHint();
 
             if (isCorrectAttempt()) {
                 alert("Congrats!");
                 isGameOver = true;
-            } else if (attempt.number === 5) {
+            } else if (currentAttempt.number === 5) {
                 // hack to re-paint then alert user
                 // read more at https://www.webperf.tips/tip/measuring-paint-time/
                 requestAnimationFrame(function() {
@@ -38,27 +38,27 @@ document.addEventListener("keyup", function(e) {
                 });
             }
 
-            attempt.number += 1;
-            attempt.letter = 0;
+            currentAttempt.number += 1;
+            currentAttempt.letter = 0;
         }
-    } else if (attempt.letter < 5) {
+    } else if (currentAttempt.letter < 5) {
         const letter = e.key.toUpperCase();
         if (letter.length === 1 && "A" <= letter && letter <= "Z") {
             renderLetter(letter);
-            attempt.letter += 1;    
+            currentAttempt.letter += 1;    
         }
     }
 });
 
 function renderLetter(letter) {
-    const attemptElement = document.querySelectorAll(".attempt")[attempt.number];
-    const letterElement = attemptElement.querySelectorAll(".letter")[attempt.letter];
+    const attemptElement = document.querySelectorAll(".attempt")[currentAttempt.number];
+    const letterElement = attemptElement.querySelectorAll(".letter")[currentAttempt.letter];
 
     letterElement.textContent = letter;
 }
 
 function renderHint() {
-    const attemptElement = document.querySelectorAll(".attempt")[attempt.number];
+    const attemptElement = document.querySelectorAll(".attempt")[currentAttempt.number];
     const letterElements = attemptElement.querySelectorAll(".letter");
 
     for (let index = 0; index < 5; ++index) {
@@ -82,7 +82,7 @@ function renderHint() {
 }
 
 function isCorrectAttempt() {
-    const attemptElement = document.querySelectorAll(".attempt")[attempt.number];
+    const attemptElement = document.querySelectorAll(".attempt")[currentAttempt.number];
     const letterElements = attemptElement.querySelectorAll(".letter");
 
     for (const letterElement of letterElements) {
