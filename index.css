@@ -7,6 +7,10 @@ header {
   margin-bottom: 20px;
 }
 
+header a {
+    margin: 0 5px;
+}
+
 .game {
   display: flex;
   flex-direction: column;
