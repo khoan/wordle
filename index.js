@@ -7,7 +7,7 @@ let isGameOver = false;
 
 document.addEventListener("keyup", function(e) {
     if (isGameOver) {
-        alert("Refresh your browser to play another round.");
+        alert("Game is over. To play another round, click New game.");
         return;
     }
 
