@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
+
+
+body {
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    margin-bottom: 50px;
+}
+
+.gameContainer {
+    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: lightgrey;
+    margin: 0 auto;
+    align-self: center;
+
+}
+
+.letterInput {
+    min-height: 100px;
+    min-width: 100px;
+    border: 3px solid lightgrey;
+    border-radius: 3px;
+    font-size:2em;
+    margin: 6px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+
+}
+
+.letterRow {
+    display: flex;
+    justify-content: center;
+}
+
+.letterInput {
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+/* #keyboard-container {
+    display: flex;
+    
+} */
+
+.keyboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    font-family: inherit;
+    
+}
+
+
+
+.key {
+    padding: 2 2em;
+    margin: 2 2px;
+    text-transform: uppercase;
+    font-size: 30px;
+
+
+} 
+
+
+#newGameButton {
+    justify-items: center;
+    margin-top: 100px;
+}
+
+#newGame {
+    min-height: 50px;
+    min-width: 250px;
+    font-size: 30px;
+    background-color: cyan;
+    color: black;
+    font-family: inherit;
+}
+
+ul {
+    margin: 5px auto;
+    display: inline-block;
+    text-align: left;
+    padding-bottom: 69px;
+}
+
+#rules {
+    font-size: 20px;
+    
+}
