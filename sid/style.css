@@ -1,0 +1,101 @@
+* {
+    font-family: 'Indie Flower', cursive;    
+    box-sizing: border-box;
+    color: white;
+}
+
+body {
+    background-color: black;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 1.5em;
+    text-align: center;
+}
+table, th, td {
+    border: 1px solid;
+    text-align: center;
+    margin: 0 auto;
+    background-color: aqua;
+    color: black;
+}
+#score {
+    display: flex;
+    justify-content: center;
+    font-size: 1.25em;
+}
+h4 {
+    margin-left: 5px;
+}
+#restart {
+    display: flex;
+    justify-content: center;
+}
+#add-row {
+    display: none;
+}
+#grid {
+    margin: 10px 0;
+    width: 100%;
+    height: auto;
+}
+#gifs, #processing {
+    display: flex;
+    justify-content: center;
+    margin: 10% 10% 0 10%;
+}
+#notifications {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.row {
+    display: flex;
+    justify-content: center;
+}
+.squares {
+    width: 50px;
+    height: 50px;
+    border: grey solid 1px;
+    margin: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+}
+.key-row {
+    display: flex;
+    justify-content: center;
+}
+button {
+    margin: 2px;
+    border-radius: 5px;
+    background-color: rgb(5, 5, 141);
+    padding: 20px 15px;
+    text-transform: capitalize;
+    border: 0;
+    box-shadow: 0 7px rgb(153, 153, 153);
+    font-size: 1.1em;
+}
+button:hover {
+    background-color: rgb(114, 61, 227);
+    cursor: pointer;
+}
+button:active, .changed {
+    background-color: rgb(114, 61, 227);
+    box-shadow: 0 3px rgb(0, 0, 0);
+    transform: translateY(3px);
+}
+p {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+img {
+    width: 30%;
+    height: auto;
+    margin: 0 auto;
+}
