@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordle</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>poor man wordle unlimited </h1>
+    <hr>
+    <div id="rules">
+        <h2>Rules</h2>
+        <h3>If you haven't played wordle.. well you just picked the poor mans version but at least we have a new game button :D</h3>
+        <ul>
+            <li>If the tile is green, the letter is correct and in the right place.</li>
+            <li>If the tile is yellow, the letter is correct but in the wrong place.</li>
+            <li>If the tile is grey, man you gotta guess another word.</li>
+
+        </ul>
+  
+
+    </div>
+   
+    <div id="gameContainer">
+
+    </div>
+
+    <br>
+    <br>
+    <br>
+        
+
+    
+    <div class="keyboard">
+        <div class="row" id="row-0">
+            <button class="key">q</button>
+            <button class="key">w</button>
+            <button class="key">e</button>
+            <button class="key">r</button>
+            <button class="key">t</button>
+            <button class="key">y</button>
+            <button class="key">u</button>
+            <button class="key">i</button>
+            <button class="key">o</button>
+            <button class="key">p</button>
+        </div>
+
+        <div class="row" id="row-1">
+            <button class="key">a</button>
+            <button class="key">s</button>
+            <button class="key">d</button>
+            <button class="key">f</button>
+            <button class="key">g</button>
+            <button class="key">h</button>
+            <button class="key">j</button>
+            <button class="key">k</button>
+            <button class="key">l</button>
+        </div>
+
+        <div class="row" id="row-2">
+            <button class="key" id="backspace">Backspace </button>
+            <button class="key">z</button>
+            <button class="key">x</button>
+            <button class="key">c</button>
+            <button class="key">v</button>
+            <button class="key">b</button>
+            <button class="key">n</button>
+            <button class="key">m</button>
+            <button class="key" id="enter">Enter</button>
+        </div> 
+    </div>
+
+    <div id="newGameButton">
+        <button id='newGame' onclick="newGame()">New Game</button>
+    </div>
+
+
+        <script src="./script.js"></script>
+</body>
+</html>
