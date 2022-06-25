@@ -1,0 +1,202 @@
+body {
+    text-align: center;
+    font-family: 'Alfa Slab One', cursive;
+    background-color:rgba(23, 17, 65, 0.7);
+}
+
+/*CSS GRID*/
+.grid {
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 2fr 1.5fr;
+    min-width: 650px;
+    max-width: 750px;
+    min-height: 500px;
+    max-height: 600px;
+    border-radius: 20px;
+} 
+@keyframes morph {
+    0% {height: 0%; background-color: rgb(41, 39, 39);}
+    100% {height: 100%;}
+}
+.input {
+    grid-area: 3/2/4/3;
+    animation:  morph 2s ease;
+    border: solid black 1px;
+    background-color: #226d82;
+}
+.hangman {
+    grid-area: 1/2/3/3;
+    animation:  morph 3s ease;
+    border: solid black 1px;
+}
+.topleft {
+    grid-area: 1/1/2/2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation:  morph 2s ease;
+    border-radius: 20px 0 0 0;
+    background-color: #99d9ea;
+}
+.left {
+    grid-area: 1/1/4/2;
+    animation:  morph 2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 0 0 0 20px;
+    background-color: #99d9ea;
+}
+.topright {
+    grid-area: 1/3/2/4;
+    animation:  morph 2s ease;
+    border-radius: 0 20px 0 0;
+    background-color: #99d9ea;
+}
+.right {
+    grid-area: 2/3/4/4;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    animation:  morph 2s ease;
+    border-radius: 0 0 20px 0;
+    background-color: #99d9ea;
+}
+.right div:nth-child(2) {
+    height: auto;
+    margin-top: 80px;
+}
+
+/*GENERAL STYLING*/
+.container {
+    width: 100%;
+    height: auto;
+    border: solid rgba(15, 39, 48, 0.255) .8px;
+}
+#hang {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: #99d9ea;
+}
+.input > div > ul {
+    margin: 0px;
+    padding: 0px;
+}
+#tiles {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.letters {
+    text-align: center;
+    margin: 30px 0 20px 0;
+    font-size: 20px;
+    height: 50px;
+    width: 50px;
+    border: solid black 1px;
+    border-radius: 10px;
+    outline: none;
+    transition: .5s ease all;
+}
+.letters:focus {
+    border: solid rgb(124, 118, 24, .6) 2px;
+    outline: solid rgb(255, 251, 0.6) 4px;
+}
+.friends {
+    height: 25%;
+    width: 75%;
+    border: solid black 1px;
+    box-shadow: 4px 3px rgba(15, 15, 15, 0.404);
+    border-radius: 10px;
+    background-color: white;;
+}
+.friends:hover {
+    border: solid yellow 2px;
+    box-shadow: 5px 4px rgba(15, 15, 15, 0.404);
+}
+@keyframes jail {
+    0% {
+        border: solid red 8px;
+    }
+    50% {
+        border: solid blue 8px;
+    }
+    100% {
+        border: solid red 8px;
+    }
+}
+#focusFriend {
+    height: 80%;
+    width: 80%;
+    border-radius: 10px;
+}
+#submit {
+    width: 33%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+#submit:hover, #submit:focus {
+    background-color: yellow;
+}
+#correctGuess {
+    margin: 0 auto;
+    width: 80%;
+    background-color: lightgreen;
+}
+#score {
+    margin: 0-auto;
+    width: 80%;
+    background-color: lightyellow;
+}
+#wrongLetters {
+    margin: 0 auto;
+    width: 80%;
+    background-color: lightcoral;
+}
+#win {
+    margin-top: 10%;
+}
+p {
+    padding: 0 5px;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 18px;
+}
+h3 {
+    color: #226d82;
+    font-size: 15px;
+    text-decoration: underline;
+}
+
+/*KEYFRAME ANIMATIONS*/
+@keyframes flip {
+    10% {height: 40px;}
+    20% {height: 30px;}
+    30% {height: 20px;}
+    40% {height: 10px;}
+    50% {height: 0px;}
+    60% {height: 10px;}
+    70% {height: 20px;}
+    80% {height: 30px;}
+    90% {height: 40px;}
+    100% {height: 50px;}
+}
+.animate {
+    animation: flip 0.7s ease;
+}
+
+/*GRADIENTS*/
+.correct {
+    background-image: radial-gradient(rgb(5, 247, 45), rgb(43, 183, 12));
+}
+.almost {
+    background-image: radial-gradient(rgb(252, 143, 34), rgb(200, 125, 14));    
+}
+.incorrect {
+    background-image: radial-gradient(rgb(248, 41, 41), rgb(188, 15, 15));
+}
