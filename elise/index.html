@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordle</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1>wordle<span>-ish</span></h1>
+
+
+
+    <div class="input currentattempt" id="firstattempt">
+        <input class="tile" id="firstletter" maxlength="1" type="text" onkeyup="lettersOnly(this), moveAround(this)" autofocus>
+        <input class="tile" id="secondletter" maxlength="1" type="text" onkeyup="lettersOnly(this), moveAround(this)">
+        <input class="tile" id="thirdletter" maxlength="1" type="text" onkeyup="lettersOnly(this), moveAround(this)">
+        <input class="tile" id="fourthletter" maxlength="1" type="text" onkeyup="lettersOnly(this), moveAround(this)">
+        <input class="tile" id="fifthletter" maxlength="1" type="text" onkeyup="lettersOnly(this), moveAround(this)">
+    </div>
+
+    <div class="input" id="secondattempt">
+        <input class="tile" id="firstletter" maxlength="1" type="text" onkeyup="lettersOnly(this), moveAround(this)" disabled>
+        <input class="tile" id="secondletter" maxlength="1" type="text" onkeyup="lettersOnly(this), moveAround(this)" disabled>
+        <input class="tile" id="thirdletter" maxlength="1" type="text" onkeyup="lettersOnly(this), moveAround(this)" disabled>
+        <input class="tile" id="fourthletter" maxlength="1" type="text" onkeyup="lettersOnly(this), moveAround(this)" disabled>
+        <input class="tile" id="fifthletter" maxlength="1" type="text" onkeyup="lettersOnly(this), moveAround(this)" disabled>
+    </div>
+
+    <div class="input" id="thirdattempt">
+        <input class="tile" id="firstletter" maxlength="1" type="text" onkeyup="lettersOnly(this), moveAround(this)" disabled>
+        <input class="tile" id="secondletter" maxlength="1" type="text" onkeyup="lettersOnly(this), moveAround(this)" disabled>
+        <input class="tile" id="thirdletter" maxlength="1" type="text" onkeyup="lettersOnly(this), moveAround(this)" disabled>
+        <input class="tile" id="fourthletter" maxlength="1" type="text" onkeyup="lettersOnly(this), moveAround(this)" disabled>
+        <input class="tile" id="fifthletter" maxlength="1" type="text" onkeyup="lettersOnly(this), moveAround(this)" disabled>
+    </div>
+
+    <div class="input" id="fourthattempt">
+        <input class="tile" id="firstletter" maxlength="1" type="text" onkeyup="lettersOnly(this), moveAround(this)" disabled>
+        <input class="tile" id="secondletter" maxlength="1" type="text" onkeyup="lettersOnly(this), moveAround(this)" disabled>
+        <input class="tile" id="thirdletter" maxlength="1" type="text" onkeyup="lettersOnly(this), moveAround(this)" disabled>
+        <input class="tile" id="fourthletter" maxlength="1" type="text" onkeyup="lettersOnly(this), moveAround(this)" disabled>
+        <input class="tile" id="fifthletter" maxlength="1" type="text" onkeyup="lettersOnly(this), moveAround(this)" disabled>
+    </div>
+
+    <div class="input" id="fifthattempt">
+        <input class="tile" id="firstletter" maxlength="1" type="text" onkeyup="lettersOnly(this), moveAround(this)" disabled>
+        <input class="tile" id="secondletter" maxlength="1" type="text" onkeyup="lettersOnly(this), moveAround(this)" disabled>
+        <input class="tile" id="thirdletter" maxlength="1" type="text" onkeyup="lettersOnly(this), moveAround(this)" disabled>
+        <input class="tile" id="fourthletter" maxlength="1" type="text" onkeyup="lettersOnly(this), moveAround(this)" disabled>
+        <input class="tile" id="fifthletter" maxlength="1" type="text" onkeyup="lettersOnly(this), moveAround(this)" disabled>
+    </div>
+
+    <div class="input" id="sixthattempt">
+        <input class="tile" id="firstletter" maxlength="1" type="text" onkeyup="lettersOnly(this), moveAround(this)" disabled>
+        <input class="tile" id="secondletter" maxlength="1" type="text" onkeyup="lettersOnly(this), moveAround(this)" disabled>
+        <input class="tile" id="thirdletter" maxlength="1" type="text" onkeyup="lettersOnly(this), moveAround(this)" disabled>
+        <input class="tile" id="fourthletter" maxlength="1" type="text" onkeyup="lettersOnly(this), moveAround(this)" disabled>
+        <input class="tile" id="fifthletter" maxlength="1" type="text" onkeyup="lettersOnly(this), moveAround(this)" disabled>
+    </div>
+
+    <div id="submit">
+        <button id="submit-guess">enter</button>
+    </div>  
+
+    <script src="script.js"></script>
+</body>
+</html>
