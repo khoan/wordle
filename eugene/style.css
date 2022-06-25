@@ -1,0 +1,178 @@
+.main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cell {
+    height: 50px;
+    width: 50px;
+    border: 2px solid gray;
+    border-radius: 4px;
+    margin: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+
+.row {
+    display: flex;
+}    
+
+.logoImg {
+    width: 227px;
+    height: 22px;
+    display: block;
+    margin: 20px auto;    
+}
+
+.logoImg:hover {
+    opacity: 0.75;
+}
+
+.blink_me {
+    animation: blinker 0.5s step-start 1;
+  }
+  
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
+
+.key {
+    margin: 0 3px;
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+    color: black;
+    border: 1px solid black;
+    border-radius: 2px;
+    -webkit-appearance: none;
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+}
+
+.key:hover {
+    opacity: 0.5;
+}
+
+#enter {
+    width: 100px;
+}
+
+.row {
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+}
+
+#keyboard {
+    margin-top: 20px;
+}
+
+#row-1 {
+    margin: 8px 0;
+}
+
+#stats {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.item {
+    text-align: center;
+    padding: 5px 17px;
+    border: 1px solid black;
+    background-color: bisque;
+}
+
+#instructions {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    width: auto;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+
+}
+
+h {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 14px;
+    text-align: justify;
+}
+
+@media screen and (max-width: 375px) {
+    h {
+        font-size: 19px;
+    }
+    p {
+        max-width: 325px;
+        margin: 6px 0 0 0;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    p {
+        max-width: 385px;
+    }
+    #id {
+        font-size: 20px;
+    }
+    input[type=number] {
+        font-size: 16px;
+    }
+}
+
+#timerSection {
+    margin-left: auto;
+    margin-right: auto;
+    width: 265px;    
+    margin-bottom: 10px;
+    background-color: bisque;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+form {
+    margin-bottom: 10px;
+}
+
+#timeDisplaySection {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#timeDisplay {
+    font-size: 20px;
+    border: 1px solid black;
+    background-color: white;
+    width: 30px;
+    text-align: center;
+}
+
+.timerButton {
+    color: black;
+    border: 1px solid black;
+    border-radius: 2px;
+    -webkit-appearance: none;
+}
+
+.timerButton:hover {
+    background-color: lightgray;
+}
+
+input[type=number] {
+    text-align: center;
+}
