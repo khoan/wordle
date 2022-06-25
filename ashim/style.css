@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Permanent+Marker&display=swap');
+
+* {
+    font-family: 'Kdam Thmor Pro', sans-serif;
+
+
+
+}
+
+#heading {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+nav {
+    display: inline;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: 3px;
+
+}
+
+li {
+    justify-content: center;
+    display: inline;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 0 30px;
+    text-decoration: none;
+}
+
+.pic {
+    position: absolute;
+    left: 30px;
+
+}
+
+.pic2 {
+    position: absolute;
+    right: 30px;
+}
+
+h1 {
+    display: inline;
+    text-align: center;
+    padding: 0 200px;
+
+}
+
+hr {
+    color: grey;
+    margin-top: 0;
+    width: 100%;
+}
+
+
+img {
+    display: inline;
+    width: 15px;
+    height: 15px;
+
+
+}
+
+
+#container {
+    display: grid;
+    flex-direction: row;
+    grid-template-rows: auto auto auto auto auto auto;
+    justify-content: center;
+    height: 50px;
+    gap: 5px;
+    margin-bottom: 300px;
+
+
+}
+
+.letterBox {
+    display: flex;
+}
+
+.rows {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+    border: 2px solid grey;
+    height: 30px;
+    width: 40px;
+    gap: 20px;
+}
+
+#keyboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    width: 500px;
+    gap: 5px;
+
+}
+
+.keys {
+    display: grid;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    gap: 3px;
+    text-align: center;
+
+    margin-bottom: 3px;
+    color: black;
+    border: 2px solid grey;
+    border-radius: 20%;
+    padding: 20px;
+}
+
+#row-1 {
+    display: grid;
+    display: flex;
+    flex-direction: row;
+    gap: 3px;
+    text-align: center;
+    margin-bottom: 3px;
+    color: grey;
+
+}
+
+#row-2 {
+    display: grid;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    gap: 3px;
+    text-align: center;
+    align-content: end;
+    margin-bottom: 3px;
+    margin-left: 15px;
+    color: grey;
+}
+
+#row-3 {
+    display: grid;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    gap: 3px;
+    text-align: center;
+    align-content: end;
+    margin-left: 25px;
+    color: grey;
+}

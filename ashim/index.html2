@@ -1,0 +1,20 @@
+function winningWord() {
+//             if (enteredLetter === secretLetters) {
+//                 alert('You picked the winning word, game over!!')
+//             } else {
+//                 for (let i = 0; i < enteredLetter.length; i++) {
+//                     if (enteredLetter[i] === secretLetters[i]) {
+//                         letters[i].style.backgroundColor = 'green'
+//                     } else if (enteredLetter[i].find(secretLetters[i]) != false) {
+//                         letters[i].style.backgroundColor = 'yellow'
+
+//                     } else {
+//                         letters[i].style.backgroundColor = 'grey'
+//                     }
+
+//                 }
+
+//             }
+
+//     }
+//     }
