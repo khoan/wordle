@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  text-align: center;
+}
+
+#gameBoard {
+  display: flex;
+  flex-wrap: wrap;
+  width: 350px;
+  height: 420px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+#keyboard {
+  display: grid;
+  grid-template-columns: repeat(20, minmax(auto, 1.25em));
+  grid-auto-rows: 2.5em;
+  gap: 0.2em;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+button {
+  font-family: "Press Start 2P", cursive;
+  font-size: 0.7rem;
+  grid-column: span 2;
+  border: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: gray;
+  color: black;
+  text-transform: uppercase;
+  cursor: pointer;
+  user-select: none;
+}
+
+button:hover {
+  color: rgb(0, 157, 255);
+  cursor: pointer;
+  user-select: none;
+}
+
+button:focus {
+  background-color: #353636;
+  color: rgb(0, 157, 255);
+}
+
+[data-key="ENTER"] {
+  grid-column: span 3;
+}
+
+[data-key="«"] {
+  grid-column: span 3;
+}
+
+[data-key="space"] {
+  grid-column: span 1;
+  visibility: hidden;
+}
+
+header {
+  font-family: "Press Start 2P", cursive;
+  font-size: 1.6rem;
+  color: rgb(0, 157, 255);
+  margin-top: 30px;
+  padding: 12px;
+  border: 5px outset rgb(0, 157, 255);
+  display: inline-block;
+  text-align: center;
+}
+
+.box {
+  /* frame */
+  width: 3.75rem;
+  height: 3.75rem;
+  border: 0.125rem solid gray;
+  margin: 0.3125rem;
+
+  /* text */
+  color: white;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Press Start 2P", cursive;
+  font-size: 2.4rem;
+}
+
+#infoBox {
+  margin-top: 20px;
+  color: white;
+  font-family: "Press Start 2P", cursive;
+  font-size: 1.2rem;
+  display: inline-block;
+  color: rgb(0, 157, 255);
+}
+
+.box[data-state="active"] {
+  border-color: rgb(0, 157, 255);
+}
+
+.box[data-state="wrong"] {
+  border: none;
+  background-color: rgb(84, 84, 84);
+}
+
+.box[data-state="wrong-location"] {
+  border: none;
+  background-color: rgb(243, 123, 11);
+}
+
+.box[data-state="correct"] {
+  border: none;
+  background-color: rgb(30, 139, 0);
+}
