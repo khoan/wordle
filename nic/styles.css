@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    -webkit-tap-highlight-color: transparent; 
+}
+
+html {
+   height: 100%;
+   width: 100%;
+}
+
+body {
+    min-height: 100%;
+    width: 100%;
+    background-color: #1a1a1b;
+    font-family: "Monstserrat", sans-serif;
+    color: white;
+}
+
+
+header {
+    display: flex;
+    height: 6vh;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    box-shadow: 0px 5px 10px -10px black;
+    padding: 0px 10px 0px 10px;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100%;
+}
+
+header nav > ul {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+header nav ul > li {
+    list-style: none;
+    font-size: 20px;
+    width: 30px;
+    height: 100%;
+    width: 50px;
+}
+
+header ul > li > button {
+    width: 100%;
+    height: 100%;
+    -webkit-tap-highlight-color: transparent; 
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header ul > li > button:active {
+    background-color: #b47cfb;
+    color: white;
+}
+
+
+
+header h1::first-letter {
+    font-size: 150%;
+}
+
+#bodyContainer {
+    height: calc(99vh - 6vh);
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+#topContainer {
+    margin-top: 10px;
+}
+#wStreak {
+    display: flex;
+    justify-content: center;
+}
+
+.keyboard {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+button {
+    all: unset;
+    height: 58px;
+    cursor: pointer;
+    color: #b47cfb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.row {
+    display: flex;
+    width: 100%;
+    margin: 0 auto 5px;
+    justify-content: space-between;
+    border: 0;
+    padding: 0;
+    align-items: center;
+}
+.key {
+    background-color: #333;
+    flex: 1;
+    margin: 0 3px;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 1px 2px 1px 1px black;
+    -webkit-tap-highlight-color: transparent; 
+}
+
+.key:active {
+    background-color: #b47cfb;
+    color: white;
+    -webkit-tap-highlight-color: transparent; 
+}
+
+#inputContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.inputs {
+    display: flex;
+}
+
+
+#input {
+    width: 1.5em;
+    height: 1.5em;
+    font-size: 2em;
+    margin: 5px;
+
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #333;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-shadow: -1px -1px 0 #333, 1px -1px 0 #333, -1px 1px 0 #333, 1px 1px 0 #333;
+    box-shadow: 1px 2px 1px 1px black;
+
+}
+
+#input:focus {
+    outline: none;
+}
+
+#nGameBtn {
+    width:95%;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 1px 2px 1px 1px black;
+
+    font-size: 24px;
+    color: white;
+    text-shadow: -1px -1px 0 #333, 1px -1px 0 #333, -1px 1px 0 #333, 1px 1px 0 #333;
+    background-color: #b47cfb;
+
+    margin: 0px 5px 5px 5px;
+    
+}
+
+
+
+/* Modal Styling */
+.modal {
+    
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #1a1a1b;
+
+    transition: all 0.5s ease-in-out;
+    transform: translateY(-200%)
+}
+
+.modal.open {
+    display: block;
+    transition: all 0.5s ease-in-out;
+    transform: translateY(0%)
+}
+
+.modalHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 6vh;
+}
+
+.modalContent {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+.modalContent p {
+    margin-bottom: 1em;
+}
+
+.modalContent h3 {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.modalContent ul {
+    margin-left: 1em;
+}
+
+.close {
+    color: #b47cfb;
+    float: right;
+    font-size: 3em;
+    padding-right: 10px;
+}
+
+.close:hover {
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+
+hr {
+    border: 1px solid #333;
+}
+
+/* got this animation from https://css-tricks.com/snippets/css/shake-css-keyframe-animation/ */
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
