@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordle - Sarah Rose</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="wordle.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+        <h1>Wordle</h1>
+        <nav class="navbar">
+            <ul>
+                <li><a class="instructions" href="javascript:modalInstructions()">Instructions</a></li>
+                <li><a class="refresh" href="javascript:refreshGame()">Play Again</a></li>
+                <li><a class="statistics" href="javascript:modalStatistic()">Game Statistics</a></li>
+            </ul>
+        </nav>   
+    </header>  
+    <main class="main">
+
+        <!-- Wordle Grid -->
+        <section class="Wordle-Input">
+            <div class="input" id="row1">
+                <div class="wordle-input" id="10"></div>
+                <div class="wordle-input" id="11"></div>
+                <div class="wordle-input" id="12"></div>
+                <div class="wordle-input" id="13"></div>
+                <div class="wordle-input" id="14"></div>        
+            </div>
+            <div class="input" id="row2">
+                <div class="wordle-input" id="20"></div>
+                <div class="wordle-input" id="21"></div>
+                <div class="wordle-input" id="22"></div>
+                <div class="wordle-input" id="23"></div>
+                <div class="wordle-input" id="24"></div> 
+            </div>
+            <div class="input" id="row3">
+                <div class="wordle-input" id="30"></div>
+                <div class="wordle-input" id="31"></div>
+                <div class="wordle-input" id="32"></div>
+                <div class="wordle-input" id="33"></div>
+                <div class="wordle-input" id="34"></div> 
+            </div>
+            <div class="input" id="row4">
+                <div class="wordle-input" id="40"></div>
+                <div class="wordle-input" id="41"></div>
+                <div class="wordle-input" id="42"></div>
+                <div class="wordle-input" id="43"></div>
+                <div class="wordle-input" id="44"></div> 
+            </div>
+            <div class="input" id="row5">
+                <div class="wordle-input" id="50"></div>
+                <div class="wordle-input" id="51"></div>
+                <div class="wordle-input" id="52"></div>
+                <div class="wordle-input" id="53"></div>
+                <div class="wordle-input" id="54"></div> 
+            </div>
+            <div class="input" id="row6">
+                <div class="wordle-input" id="60"></div>
+                <div class="wordle-input" id="61"></div>
+                <div class="wordle-input" id="62"></div>
+                <div class="wordle-input" id="63"></div>
+                <div class="wordle-input" id="64"></div> 
+            </div>    
+        </section>
+
+        <!-- Wordle Keyboard -->
+        <section class="keyboard">
+                <div class="row" id="row-0">
+                    <button class="key" id="q">q</button>
+                    <button class="key" id="w">w</button>
+                    <button class="key" id="e">e</button>
+                    <button class="key" id="r">r</button>
+                    <button class="key" id="t">t</button>
+                    <button class="key" id="y">y</button>
+                    <button class="key" id="u">u</button>
+                    <button class="key" id="i">i</button>
+                    <button class="key" id="o">o</button>
+                    <button class="key" id="p">p</button>
+                </div>
+                <div class="row" id="row-1">
+                    <button class="key" id="a">a</button>
+                    <button class="key" id="s">s</button>
+                    <button class="key" id="d">d</button>
+                    <button class="key" id="f">f</button>
+                    <button class="key" id="g">g</button>
+                    <button class="key" id="h">h</button>
+                    <button class="key" id="j">j</button>
+                    <button class="key" id="k">k</button>
+                    <button class="key" id="l">l</button>
+                </div>
+                <div class="row" id="row-2">
+                    <button class="key">ENTER</button>
+                    <button class="key" id="z">z</button>
+                    <button class="key" id="x">x</button>
+                    <button class="key" id="c">c</button>
+                    <button class="key" id="v">v</button>
+                    <button class="key" id="b">b</button>
+                    <button class="key" id="n">n</button>
+                    <button class="key" id="m">m</button>
+                    <button class="key" id="backspace"><img src="images/backspace.png" alt="Backspace Key"/>BACKSPACE</button>
+                </div>
+                
+                <!-- Modal content - Instructions Page -->
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                      <span class="close">&times;</span>
+                        <p>Guess the WORDLE in six tries.</p>
+                        <p>Each guess must be a valid five-letter word. Hit the enter button to submit.</p>
+                        <p>After each guess, the color of the tiles will change to show how close your guess was to the word.</p>
+                        <h2>Examples</h2>
+                        <section class="Wordle-Input">
+                            <div class="input" >
+                                <div class="green">B</div>
+                                <div class="wordle-input">R</div>
+                                <div class="wordle-input">E</div>
+                                <div class="wordle-input">A</div>
+                                <div class="wordle-input">K</div>        
+                            </div>
+                        </section>
+                        <p>The letter B is in the word and in the correct spot.</p>
+                        <section class="Wordle-Input">
+                            <div class="input">
+                                <div class="wordle-input">K</div>
+                                <div class="wordle-input">A</div>
+                                <div class="yellow">Y</div>
+                                <div class="wordle-input">A</div>
+                                <div class="wordle-input">K</div>        
+                            </div>
+                        </section>
+                        <p>The letter Y is in the word but in the wrong spot.</p>
+                        <section class="Wordle-Input">
+                            <div class="input">
+                                <div class="wordle-input">V</div>
+                                <div class="wordle-input">A</div>
+                                <div class="grey">U</div>
+                                <div class="wordle-input">G</div>
+                                <div class="wordle-input">E</div>        
+                            </div>
+                        </section>
+                        <p>The letter U is not in the word in any spot.</p>
+                        <h2>Play WORDLE as much as you like!</h2>
+                    </div>                  
+                </div>
+
+                <!-- Modal content - Statistics Page -->
+                <div id="myModal-statistics" class="modal-statistics">
+                    <div class="modal-content-statistics">
+                        <span class="close-statistics">&times;</span>
+                        <div class="main-stats">
+                            <H2 class="played">Played</H2>
+                            <div class="played" id="update-played"></div>
+                            <h2 class="win-percentage">Win %</h2>
+                            <div class="win-percentage" id="update-percentage"></div>
+                        </div>
+                        <div class="graph-stats">
+                            <div class="graph" id="1">1</div>
+                            <div class="graph" id="2">2</div> 
+                            <div class="graph" id="3">3</div> 
+                            <div class="graph" id="4">4</div> 
+                            <div class="graph" id="5">5</div> 
+                            <div class="graph" id="6">6</div>  
+                        </div> 
+                    </div>
+                </div>      
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
+    
+
+    
+  </body>
+</html>
