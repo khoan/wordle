@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A simplified Wordle</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="wordleWords.js"></script>
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <img src="logo.svg" class="logoImg" onClick="main()"/>
+    <div id="stats">
+        <div class="item">
+            <div id="played">0</div>
+            <div>🕹️ Games Played</div>
+        </div>
+        <div class="item">
+            <div id="won">0</div>
+            <div>🏆 Games Won</div>
+        </div>
+    </div>
+    <section id="timerSection">
+        <form>
+            <label for="time">Timeout in minutes (max 30):</label>
+            <input type="number" id="time" name="time" min="0" max="30">
+        </form>
+        <section id="timeDisplaySection">
+            <button class="timerButton" id="timerStart">Start Timer</button>
+            <button class="timerButton" id="timerStop">Stop Timer</button>
+            <div id="timeDisplay">0</div>
+        </section>
+    </section>
+    <div class="main"></div>
+    <div id="keyboard">
+        <div class="row" id="row-0">
+            <button class="key">Q</button>
+            <button class="key">W</button>
+            <button class="key">E</button>
+            <button class="key">R</button>
+            <button class="key">T</button>
+            <button class="key">Y</button>
+            <button class="key">U</button>
+            <button class="key">I</button>
+            <button class="key">O</button>
+            <button class="key">P</button>
+        </div>
+        <div class="row" id="row-1">
+            <button class="key">A</button>
+            <button class="key">S</button>
+            <button class="key">D</button>
+            <button class="key">F</button>
+            <button class="key">G</button>
+            <button class="key">H</button>
+            <button class="key">J</button>
+            <button class="key">K</button>
+            <button class="key">L</button>
+            <button class="key" id="del">Del</button>            
+        </div>
+        <div class="row" id="row-2">
+            <button class="key">Z</button>
+            <button class="key">X</button>
+            <button class="key">C</button>
+            <button class="key">V</button>
+            <button class="key">B</button>
+            <button class="key">N</button>
+            <button class="key">M</button>
+            <button class="key" id="enter">Enter</button>            
+        </div>
+    </div>
+    <section id="instructions">
+        <h>Wordle Game: Guess the Hidden Word</h>
+        <p>The rules are very simple: You need to guess the hidden 5 letter word in 6 tries. To get started, just type any word on the first line. If the letter is guessed correctly and is in the correct place, it will be highlighted in green, if the letter is in the word, but in the wrong place - in yellow, and if the letter is not in the word, it will remain gray. Can you guess the hidden word in 6 tries?</p>
+    </section>
+</body>
+</html>
