@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worlde Time!</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <h1>Wordle Time!</h1>
+    </nav>
+    <section>
+        <table>
+            <tr>
+                <th>Result</th>
+                <th>Points</th>
+            </tr>
+            <tr>
+                <td>Win at Row 1</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td>Win at Row 2</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>Win at Row 3</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>Win at anything after Row 3 </td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>Lose</td>
+                <td>-2</td>
+            </tr>
+            <tr>
+                <td>Borrow 2 additional rows</td>
+                <td>-10</td>
+            </tr>
+        </table>
+    </section>
+    <section id='score'>
+        <h3>Your score </h3>
+        <h4>0</h4>
+    </section>
+    <section id='restart'>
+        <button>RESTART GAME</button>
+        <button id='add-row'>MORE CHANCES PLEASE!</button>
+    </section>
+    <div id='processing'>
+        <img id='img-2' src="" alt="">
+    </div>
+    <section id='grid'>
+        <div class='row' class='row-1'>
+            <div class='squares'></div>
+            <div class='squares'></div>
+            <div class='squares'></div>
+            <div class='squares'></div>
+            <div class='squares'></div>
+        </div>
+        <div class='row' class='row-2'>
+            <div class='squares'></div>
+            <div class='squares'></div>
+            <div class='squares'></div>
+            <div class='squares'></div>
+            <div class='squares'></div>
+        </div>
+        <div class='row' class='row-3'>
+            <div class='squares'></div>
+            <div class='squares'></div>
+            <div class='squares'></div>
+            <div class='squares'></div>
+            <div class='squares'></div>
+        </div>
+        <div class='row' class='row-4'>
+            <div class='squares'></div>
+            <div class='squares'></div>
+            <div class='squares'></div>
+            <div class='squares'></div>
+            <div class='squares'></div>
+        </div>
+        <div class='row' class='row-5'>
+            <div class='squares'></div>
+            <div class='squares'></div>
+            <div class='squares'></div>
+            <div class='squares'></div>
+            <div class='squares'></div>
+        </div>
+        <div class='row' class='row-6'>
+            <div class='squares'></div>
+            <div class='squares'></div>
+            <div class='squares'></div>
+            <div class='squares'></div>
+            <div class='squares'></div>
+        </div>
+    </section>
+    <section id='gifs'>
+        <img id='img-1' src="" alt="">
+    </section>
+    <section id='notifications'>
+        <p id='notification-1'></p>
+        <p id='notification-2'></p>
+        <p id='notification-3'></p>
+    </section>
+    <section id='keyboard'>
+        <div class='key-row'>
+            <button>q</button>
+            <button>w</button>
+            <button>e</button>
+            <button>r</button>
+            <button>t</button>
+            <button>y</button>
+            <button>u</button>
+            <button>i</button>
+            <button>o</button>
+            <button>p</button>
+        </div>
+        <div class='key-row'>
+            <button>a</button>
+            <button>s</button>
+            <button>d</button>
+            <button>f</button>
+            <button>g</button>
+            <button>h</button>
+            <button>j</button>
+            <button>k</button>
+            <button>l</button>
+        </div>
+        <div class='key-row'>
+            <button>enter</button>
+            <button>z</button>
+            <button>x</button>
+            <button>c</button>
+            <button>v</button>
+            <button>b</button>
+            <button>n</button>
+            <button>m</button>
+            <button>del</button>
+        </div>
+    </section>
+    <script src="./script.js"></script>
+</body>
+</html>
